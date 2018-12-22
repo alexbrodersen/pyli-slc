@@ -1,0 +1,138 @@
+
+|------------------------------------------+----------+-----------------|
+| Scale                                    | Nickname | Number of Items |
+|------------------------------------------+----------+-----------------|
+|------------------------------------------+----------+-----------------|
+| Positive Youth Leadership Identity Scale | PYLI     |              23 |
+| Social Desirability                      | SD       |              14 |
+| Youth Hope Scale                         | YH       |               6 |
+| Goal-Orientation Scale                   | GO       |              16 |
+| Youth Voice                              | YV       |              29 |
+| Hopelessness Scale (for Children?)       | HLN      |              17 |
+| Big 5                                    |          |                 |
+|------------------------------------------+----------+-----------------|
+| PYL+ SUM                                 |          |             105 |
+|------------------------------------------+----------+-----------------|
+| SLC - Learning and Reasoning             | SLC-LR   |              31 |
+| SLC - Communication                      | SLC-C    |              23 |
+| SLC - Civic Responsibility               | SLC-CR   |              19 |
+| SLC - Personal Behavior                  | SLC-PB   |              34 |
+| SLC - Strategic Planning                 | SLC-SP   |              16 |
+| SLC - Self Awareness and Development     | SLC-SAD  |              19 |
+| SLC - Group Dynamics                     | SLC-GD   |              13 |
+| SLC - Interpersonal Interaction          | SLC-II   |              34 |
+|------------------------------------------+----------+-----------------|
+| SLC+ SUM                                 |          |             189 |
+
+
+| Scale                        | Nickname | Number of Items  |
+|------------------------------+----------+------------------|
+| SLC - Learning and Reasoning | SLC-LR   |               31 |
+|------------------------------+----------+------------------|
+| Research                     |          |                3 |
+| Other Perspectives           |          |                3 |
+| Reflection and Application   |          |                3 |
+| Systems Thinking             |          |                3 |
+| Analysis                     |          |                3 |
+| Synthesis                    |          |                3 |
+| Evaluation                   |          |                3 |
+| Idea Generation              |          |                3 |
+| Problem Solving              |          |                3 |
+| Decision Making              |          |                3 |
+
+
+| Scale                          | Nickname | Number of Items |
+|--------------------------------+----------+-----------------|
+| SLC - Communication            | SLC-C    |              23 |
+|--------------------------------+----------+-----------------|
+| Verbal Communication           |          |               3 |
+| Nonverbal Communication        |          |               3 |
+| Listening                      |          |               3 |
+| Writing                        |          |               3 |
+| Facilitation                   |          |               3 |
+| Conflict Negotiation           |          |               3 |
+| Advocating for a Point of View |          |               3 |
+
+
+| Scale                      | Nickname | Number of Items |
+|----------------------------+----------+-----------------|
+| SLC - Civic Responsibility | SLC-CR   |              19 |
+|----------------------------+----------+-----------------|
+| Diversity                  |          |               3 |
+| Others’ Circumstances      |          |               3 |
+| Inclusion                  |          |               3 |
+| Social Justice             |          |               3 |
+| Social Responsibility      |          |               3 |
+| Service                    |          |               3 |
+
+
+| Scale                                | Nickname | Number of Items |
+|--------------------------------------+----------+-----------------|
+| SLC - Personal Behavior              | SLC-PB   |              34 |
+|--------------------------------------+----------+-----------------|
+| Initiative                           |          |               3 |
+| Functioning Independently            |          |               3 |
+| Follow-Through                       |          |               3 |
+| Responsibility for Personal Behavior |          |               3 |
+| Ethics                               |          |               3 |
+| Responding to Ambiguity              |          |               3 |
+| Responding to Change                 |          |               3 |
+| Resiliency                           |          |               3 |
+| Positive Attitude                    |          |               3 |
+| Confidence                           |          |               3 |
+| Excellence                           |          |               3 |
+
+
+| Scale                      | Nickname | Number of Items |
+|----------------------------+----------+-----------------|
+| SLC - Strategic Planning   | SLC-SP   |              16 |
+|----------------------------+----------+-----------------|
+| Strategic Planning Mission |          |               3 |
+| Vision                     |          |               3 |
+| Goals                      |          |               3 |
+| Plan                       |          |               3 |
+| Organization               |          |               3 |
+
+
+| Scale                                | Nickname | Number of Items |
+|--------------------------------------+----------+-----------------|
+| SLC - Self Awareness and Development | SLC-SAD  |              19 |
+|--------------------------------------+----------+-----------------|
+| Self-Understanding                   |          |               3 |
+| Personal Values                      |          |               3 |
+| Personal Contributions               |          |               3 |
+| Scope of Competence                  |          |               3 |
+| Receiving Feedback                   |          |               3 |
+| Self-Development                     |          |               3 |
+
+
+| Scale                   | Nickname | Number of Items |
+|-------------------------+----------+-----------------|
+| SLC - Group Dynamics    | SLC-GD   |              13 |
+|-------------------------+----------+-----------------|
+| Organizational Behavior |          |               3 |
+| Power Dynamics          |          |               3 |
+| Group Development       |          |               3 |
+| Creating Change         |          |               3 |
+
+
+| Scale                           | Nickname | Number of Items |
+|---------------------------------+----------+-----------------|
+| SLC - Interpersonal Interaction | SLC-II   |              34 |
+|---------------------------------+----------+-----------------|
+| Productive Relationships        |          |               3 |
+| Appropriate Interaction         |          |               3 |
+| Helping Others                  |          |               3 |
+| Empathy                         |          |               3 |
+| Mentoring                       |          |               3 |
+| Motivation                      |          |               3 |
+| Others’ Contributions           |          |               3 |
+| Empowerment                     |          |               3 |
+| Providing Feedback              |          |               3 |
+| Supervision                     |          |               3 |
+| Collaboration                   |          |               3 |
+
+
+
+
+
