@@ -1,3 +1,5 @@
+
+
 pylcr_lambda <- c(
     0.786, -0.002,  0.115, -0.003,  0.010,  0.008,
     0.746,  0.024,  0.158,  0.035,  0.038, -0.001,
@@ -239,10 +241,18 @@ slc_SP <- c(NA,-.74,NA,
 
 slc_SP  <- matrix(slc_SP,ncol = 3, byrow = T)
 
-slc_C
-slc_CR
-slc_GD
-slc_II
-slc_LR
-slc_SA
-slc_SP
+slc <- list(slc_C = list(lambda = slc_C),
+            slc_CR = list(lambda = slc_CR),
+            slc_GD = list(lambda = slc_GD),
+            slc_II = list(lambda = slc_II),
+            slc_LR = list(lambda = slc_LR),
+            slc_SA = list(lambda = slc_SA),
+            slc_SP = list(lambda = slc_SP))
+
+
+slc <- lapply(slc,function(x){
+    n_facets <- nrow(x$lambda)/3
+    return(list(lambda = x$lambda, n_facets = n_facets))
+})
+
+
