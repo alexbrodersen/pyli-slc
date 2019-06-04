@@ -1,29 +1,49 @@
 
-|------------------------------------------+----------+-----------------|
-| Scale                                    | Nickname | Number of Items |
-|------------------------------------------+----------+-----------------|
-|------------------------------------------+----------+-----------------|
-| Positive Youth Leadership Identity Scale | PYLI     |              23 |
-| Social Desirability                      | SD       |              14 |
-| Youth Hope Scale                         | YH       |               6 |
-| Goal-Orientation Scale                   | GO       |              16 |
-| Youth Voice                              | YV       |              29 |
-| Hopelessness Scale (for Children?)       | HLN      |              17 |
-| Big 5                                    |          |                 |
-|------------------------------------------+----------+-----------------|
-| PYL+ SUM                                 |          |             105 |
-|------------------------------------------+----------+-----------------|
-| SLC - Learning and Reasoning             | SLC-LR   |              31 |
-| SLC - Communication                      | SLC-C    |              23 |
-| SLC - Civic Responsibility               | SLC-CR   |              19 |
-| SLC - Personal Behavior                  | SLC-PB   |              34 |
-| SLC - Strategic Planning                 | SLC-SP   |              16 |
-| SLC - Self Awareness and Development     | SLC-SAD  |              19 |
-| SLC - Group Dynamics                     | SLC-GD   |              13 |
-| SLC - Interpersonal Interaction          | SLC-II   |              34 |
-|------------------------------------------+----------+-----------------|
-| SLC+ SUM                                 |          |             189 |
+* Item Wishlist
 
+|------------------------------------------+----------+-----------------+----------|
+| Scale                                    | Nickname | Number of Items | Priority |
+|------------------------------------------+----------+-----------------+----------|
+|------------------------------------------+----------+-----------------+----------|
+| Demographic                              | Demo     |               4 |        4 |
+|Positive Youth Leadership Identity Scale  | PYLI     |              23 |       23 |
+| Social Desirability                      | SD       |              14 |        0 |
+| Youth Hope Scale                         | YH       |               6 |        0 |
+| Goal-Orientation Scale                   | GO       |              16 |        0 |
+| Youth Voice                              | YV       |              29 |        0 |
+| Hopelessness Scale (for Children?)       | HLN      |              17 |        0 |
+| Big 5                                    |          |              46 |       46 |
+|------------------------------------------+----------+-----------------+----------|
+| PYL+ SUM                                 |          |             155 |       73 |
+|------------------------------------------+----------+-----------------+----------|
+| SLC - Learning and Reasoning             | SLC-LR   |              31 |       31 |
+| SLC - Communication                      | SLC-C    |              23 |       23 |
+| SLC - Civic Responsibility               | SLC-CR   |              19 |       19 |
+| SLC - Personal Behavior                  | SLC-PB   |              34 |       34 |
+| SLC - Strategic Planning                 | SLC-SP   |              16 |       16 |
+| SLC - Self Awareness and Development     | SLC-SAD  |              19 |       19 |
+| SLC - Group Dynamics                     | SLC-GD   |              13 |       13 |
+| SLC - Interpersonal Interaction          | SLC-II   |              34 |       34 |
+|------------------------------------------+----------+-----------------+----------|
+| SLC+ SUM                                 |          |             189 |      189 |
+|------------------------------------------+----------+-----------------+----------|
+| Total                                    |          |             344 |      262 |
+#+TBLFM: @10$3=vsum(@2..@9)::@19$3=vsum(@11..@18)::@20$3=(@10 + @19)::@10$4=vsum(@2..@9)::@19$4=vsum(@11..@18)::@20$4=(@10 + @19)
+
+* Positive Youth Leadership Identity Scale
+
+| Scale   | Nickname | Number of Items |
+|---------+----------+-----------------|
+| PYLI    | PYLI     |              23 |
+|---------+----------+-----------------|
+| lse-lro |          |               7 |
+| ldrdev  |          |               3 |
+| serd    |          |               3 |
+| empsi   |          |               4 |
+| optgw   |          |               3 |
+| grphop  |          |               3 |
+
+* SLC - Scale Breakdown
 
 | Scale                        | Nickname | Number of Items  |
 |------------------------------+----------+------------------|
@@ -40,7 +60,6 @@
 | Problem Solving              |          |                3 |
 | Decision Making              |          |                3 |
 
-
 | Scale                          | Nickname | Number of Items |
 |--------------------------------+----------+-----------------|
 | SLC - Communication            | SLC-C    |              23 |
@@ -53,7 +72,6 @@
 | Conflict Negotiation           |          |               3 |
 | Advocating for a Point of View |          |               3 |
 
-
 | Scale                      | Nickname | Number of Items |
 |----------------------------+----------+-----------------|
 | SLC - Civic Responsibility | SLC-CR   |              19 |
@@ -64,7 +82,6 @@
 | Social Justice             |          |               3 |
 | Social Responsibility      |          |               3 |
 | Service                    |          |               3 |
-
 
 | Scale                                | Nickname | Number of Items |
 |--------------------------------------+----------+-----------------|
@@ -82,7 +99,6 @@
 | Confidence                           |          |               3 |
 | Excellence                           |          |               3 |
 
-
 | Scale                      | Nickname | Number of Items |
 |----------------------------+----------+-----------------|
 | SLC - Strategic Planning   | SLC-SP   |              16 |
@@ -92,7 +108,6 @@
 | Goals                      |          |               3 |
 | Plan                       |          |               3 |
 | Organization               |          |               3 |
-
 
 | Scale                                | Nickname | Number of Items |
 |--------------------------------------+----------+-----------------|
@@ -105,7 +120,6 @@
 | Receiving Feedback                   |          |               3 |
 | Self-Development                     |          |               3 |
 
-
 | Scale                   | Nickname | Number of Items |
 |-------------------------+----------+-----------------|
 | SLC - Group Dynamics    | SLC-GD   |              13 |
@@ -114,7 +128,6 @@
 | Power Dynamics          |          |               3 |
 | Group Development       |          |               3 |
 | Creating Change         |          |               3 |
-
 
 | Scale                           | Nickname | Number of Items |
 |---------------------------------+----------+-----------------|
@@ -131,8 +144,3 @@
 | Providing Feedback              |          |               3 |
 | Supervision                     |          |               3 |
 | Collaboration                   |          |               3 |
-
-
-
-
-

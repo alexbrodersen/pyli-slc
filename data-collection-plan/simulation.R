@@ -1,6 +1,6 @@
 
-
-pylcr_lambda <- c(
+pyli_lambda
+pyli_lambda <- c(
     0.786, -0.002,  0.115, -0.003,  0.010,  0.008,
     0.746,  0.024,  0.158,  0.035,  0.038, -0.001,
     0.716,  0.071,  0.189, -0.009, -0.016, -0.008,
@@ -51,8 +51,8 @@ pyli_mean <- c(4.78,
                4.32,
                4.26)
 
-
 R_imp <- pyli_lambda %*% t(pyli_lambda)
+corrplot(R_imp)
 diag(R_imp) <- 1
 eigen(R_imp)$values
 
@@ -60,184 +60,179 @@ library(mvtnorm)
 
 dat <- rmvnorm(1000,mean = pyli_mean,sigma = R_imp)
 
+R <- cor(dat)
+R
+dat <- round(dat)
 library(GPArotation)
-factanal(dat, 6, rotation = "geominT")
-
+summary(fa(R, 6))
 
 pyli_lambda
 
-
-slc_CR <- c(.64,NA,NA,NA,
-            .57,NA,NA,NA,
-            .57,NA,NA,NA,
-            .68,NA,NA,NA,
-            .63,NA,NA,NA,
-            .44,NA,NA,NA,
-            .75,NA,NA,NA,
-            .80,NA,NA,NA,
-            .82,NA,NA,NA,
-            NA,NA,.58,NA,
-            NA,NA,.92,NA,
-            NA,NA,.88,NA,
-            NA,NA,NA,.56,
-            NA,NA,NA,.66,
-            NA,.42,NA,.40,
-            NA,.96,NA,NA,
-            NA,.94,NA,NA,
-            NA,.85,NA,NA)
+slc_CR <- c(.64,0,0,0,
+            .57,0,0,0,
+            .57,0,0,0,
+            .68,0,0,0,
+            .63,0,0,0,
+            .44,0,0,0,
+            .75,0,0,0,
+            .80,0,0,0,
+            .82,0,0,0,
+            0,0,.58,0,
+            0,0,.92,0,
+            0,0,.88,0,
+            0,0,0,.56,
+            0,0,0,.66,
+            0,.42,0,.40,
+            0,.96,0,0,
+            0,.94,0,0,
+            0,.85,0,0)
 
 slc_CR <- matrix(slc_CR,ncol = 4, byrow = T)
 
-
-slc_C <- c(.72,NA,NA,NA,NA,
-           .78,NA,NA,NA,NA,
-           .66,NA,NA,NA,NA,
-           .59,NA,NA,NA,NA,
-           .60,NA,NA,NA,NA,
-           NA,NA,NA,-.80,NA,
-           NA,NA,NA,-.90,NA,
-           NA,NA,NA,-.82,NA,
-           NA,NA,NA,-.63,NA,
-           NA,-.95,NA,NA,NA,
-           NA,-.94,NA,NA,NA,
-           NA,-.90,NA,NA,NA,
-           NA,NA,.61,NA,NA,
-           NA,NA,.54,NA,NA,
-           NA,NA,.77,NA,NA,
-           NA,NA,.71,NA,NA,
-           NA,NA,.63,NA,NA,
-           NA,NA,.57,NA,NA,
-           NA,NA,NA,NA,-.52,
-           NA,NA,NA,NA,-.86,
-           NA,NA,NA,NA,-.79)
+slc_C <- c(.72,0,0,0,0,
+           .78,0,0,0,0,
+           .66,0,0,0,0,
+           .59,0,0,0,0,
+           .60,0,0,0,0,
+           0,0,0,-.80,0,
+           0,0,0,-.90,0,
+           0,0,0,-.82,0,
+           0,0,0,-.63,0,
+           0,-.95,0,0,0,
+           0,-.94,0,0,0,
+           0,-.90,0,0,0,
+           0,0,.61,0,0,
+           0,0,.54,0,0,
+           0,0,.77,0,0,
+           0,0,.71,0,0,
+           0,0,.63,0,0,
+           0,0,.57,0,0,
+           0,0,0,0,-.52,
+           0,0,0,0,-.86,
+           0,0,0,0,-.79)
 
 slc_C <- matrix(slc_C,ncol = 5, byrow = T)
 
-slc_GD <- c(.83,NA,NA,
-            .85,NA,NA,
-            .85,NA,NA,
-            .81,NA,NA,
-            .74,NA,NA,
-            .65,NA,NA,
-            NA,.89,NA,
-            NA,.91,NA,
-            NA,.87,NA,
-            NA,NA,.92,
-            NA,NA,.90,
-            NA,NA,.52)
+slc_GD <- c(.83,0,0,
+            .85,0,0,
+            .85,0,0,
+            .81,0,0,
+            .74,0,0,
+            .65,0,0,
+            0,.89,0,
+            0,.91,0,
+            0,.87,0,
+            0,0,.92,
+            0,0,.90,
+            0,0,.52)
 
 slc_GD <- matrix(slc_GD,ncol = 3, byrow = T)
 
-
-
-slc_II <- c(NA,NA,NA,.49,NA,NA,
-            NA,NA,NA,NA,NA,NA,
-            NA,NA,NA,.59,NA,NA,
-            NA,NA,NA,.69,NA,NA,
-            NA,NA,NA,.70,NA,NA,
-            NA,NA,NA,.65,NA,NA,
-            .79,NA,NA,NA,NA,NA,
-            .67,NA,NA,NA,NA,NA,
-            .77,NA,NA,NA,NA,NA,
-            .62,NA,NA,NA,NA,NA,
-            .49,NA,NA,NA,NA,NA,
-            .50,NA,NA,NA,NA,NA,
-            NA,NA,NA,NA,NA,.73,
-            NA,NA,NA,NA,NA,.70,
-            NA,NA,NA,NA,NA,.55,
-            NA,-.77,NA,NA,NA,NA,
-            NA,-.76,NA,NA,NA,NA,
-            NA,-.67,NA,NA,NA,NA,
-            NA,-.68,NA,NA,NA,NA,
-            NA,-.77,NA,NA,NA,NA,
-            NA,-.70,NA,NA,NA,NA,
-            NA,NA,.42,NA,NA,NA,
-            NA,NA,.87,NA,NA,NA,
-            NA,NA,.81,NA,NA,NA,
-            NA,NA,NA,NA,NA,.79,
-            NA,NA,NA,NA,NA,.71,
-            NA,NA,NA,NA,NA,NA,
-            NA,NA,NA,NA,-.47,NA,
-            NA,NA,NA,NA,-.58,NA,
-            NA,NA,NA,NA,-.54,NA,
-            NA,NA,.51,NA,NA,NA,
-            NA,NA,NA,NA,-.42,NA,
-            NA,NA,.84,NA,NA,NA)
+slc_II <- c(0,0,0,.49,0,0,
+            0,0,0,0,0,0,
+            0,0,0,.59,0,0,
+            0,0,0,.69,0,0,
+            0,0,0,.70,0,0,
+            0,0,0,.65,0,0,
+            .79,0,0,0,0,0,
+            .67,0,0,0,0,0,
+            .77,0,0,0,0,0,
+            .62,0,0,0,0,0,
+            .49,0,0,0,0,0,
+            .50,0,0,0,0,0,
+            0,0,0,0,0,.73,
+            0,0,0,0,0,.70,
+            0,0,0,0,0,.55,
+            0,-.77,0,0,0,0,
+            0,-.76,0,0,0,0,
+            0,-.67,0,0,0,0,
+            0,-.68,0,0,0,0,
+            0,-.77,0,0,0,0,
+            0,-.70,0,0,0,0,
+            0,0,.42,0,0,0,
+            0,0,.87,0,0,0,
+            0,0,.81,0,0,0,
+            0,0,0,0,0,.79,
+            0,0,0,0,0,.71,
+            0,0,0,0,0,0,
+            0,0,0,0,-.47,0,
+            0,0,0,0,-.58,0,
+            0,0,0,0,-.54,0,
+            0,0,.51,0,0,0,
+            0,0,0,0,-.42,0,
+            0,0,.84,0,0,0)
 
 slc_II  <- matrix(slc_II,ncol = 6, byrow = T)
 
-
-
-slc_LR <- c(NA,NA,NA,NA,.73,NA,
-            NA,NA,NA,NA,.68,NA,
-            NA,NA,NA,NA,.65,NA,
-            NA,NA,NA,.59,NA,NA,
-            NA,NA,NA,.56,NA,NA,
-            NA,NA,NA,.69,NA,NA,
-            NA,NA,NA,NA,NA,-.86,
-            NA,NA,NA,NA,NA,-.86,
-            NA,NA,NA,NA,NA,-.80,
-            NA,NA,NA,NA,NA,NA,
-            .52,NA,NA,NA,NA,NA,
-            .43,NA,NA,NA,NA,NA,
-            .61,NA,NA,NA,NA,NA,
-            .40,NA,NA,NA,NA,NA,
-            .71,NA,NA,NA,NA,NA,
-            .69,NA,NA,NA,NA,NA,
-            .72,NA,NA,NA,NA,NA,
-            .78,NA,NA,NA,NA,NA,
-            NA,NA,.61,NA,NA,NA,
-            NA,NA,.74,NA,NA,NA,
-            NA,NA,.64,NA,NA,NA,
-            NA,-.88,NA,NA,NA,NA,
-            NA,-.85,NA,NA,NA,NA,
-            NA,-.89,NA,NA,NA,NA,
-            NA,-.44,NA,NA,NA,NA,
-            NA,-.49,NA,NA,NA,NA,
-            NA,-.46,NA,NA,NA,NA,
-            NA,NA,.53,NA,NA,NA,
-            NA,NA,.53,NA,NA,NA,
-            NA,NA,.49,NA,NA,NA)
+slc_LR <- c(0,0,0,0,.73,0,
+            0,0,0,0,.68,0,
+            0,0,0,0,.65,0,
+            0,0,0,.59,0,0,
+            0,0,0,.56,0,0,
+            0,0,0,.69,0,0,
+            0,0,0,0,0,-.86,
+            0,0,0,0,0,-.86,
+            0,0,0,0,0,-.80,
+            0,0,0,0,0,0,
+            .52,0,0,0,0,0,
+            .43,0,0,0,0,0,
+            .61,0,0,0,0,0,
+            .40,0,0,0,0,0,
+            .71,0,0,0,0,0,
+            .69,0,0,0,0,0,
+            .72,0,0,0,0,0,
+            .78,0,0,0,0,0,
+            0,0,.61,0,0,0,
+            0,0,.74,0,0,0,
+            0,0,.64,0,0,0,
+            0,-.88,0,0,0,0,
+            0,-.85,0,0,0,0,
+            0,-.89,0,0,0,0,
+            0,-.44,0,0,0,0,
+            0,-.49,0,0,0,0,
+            0,-.46,0,0,0,0,
+            0,0,.53,0,0,0,
+            0,0,.53,0,0,0,
+            0,0,.49,0,0,0)
 
 slc_LR  <- matrix(slc_LR,ncol = 6, byrow = T)
 
-
-slc_SA <- c(.63,NA,NA,NA,NA,
-            .52,NA,NA,NA,NA,
-            .53,NA,NA,NA,NA,
-            .83,NA,NA,NA,NA,
-            .80,NA,NA,NA,NA,
-            .72,NA,NA,NA,NA,
-            NA,NA,NA,.77,NA,
-            NA,NA,NA,.84,NA,
-            NA,NA,NA,.85,NA,
-            NA,.64,NA,NA,NA,
-            NA,.82,NA,NA,NA,
-            NA,.84,NA,NA,NA,
-            NA,NA,NA,NA,-.74,
-            NA,NA,NA,NA,-.81,
-            NA,NA,NA,NA,-.71,
-            NA,NA,-.62,NA,NA,
-            NA,NA,-.68,NA,NA,
-            NA,NA,-.66,NA,NA)
+slc_SA <- c(.63,0,0,0,0,
+            .52,0,0,0,0,
+            .53,0,0,0,0,
+            .83,0,0,0,0,
+            .80,0,0,0,0,
+            .72,0,0,0,0,
+            0,0,0,.77,0,
+            0,0,0,.84,0,
+            0,0,0,.85,0,
+            0,.64,0,0,0,
+            0,.82,0,0,0,
+            0,.84,0,0,0,
+            0,0,0,0,-.74,
+            0,0,0,0,-.81,
+            0,0,0,0,-.71,
+            0,0,-.62,0,0,
+            0,0,-.68,0,0,
+            0,0,-.66,0,0)
 
 slc_SA  <- matrix(slc_SA,ncol = 5, byrow = T)
 
-slc_SP <- c(NA,-.74,NA,
-            NA,-.85,NA,
-            NA,-.83,NA,
-            NA,-.79,NA,
-            NA,-.88,NA,
-            NA,-.80,NA,
-            .83,NA,NA,
-            .80,NA,NA,
-            .83,NA,NA,
-            .75,NA,NA,
-            .70,NA,NA,
-            .80,NA,NA,
-            NA,NA,.82,
-            NA,NA,.91,
-            NA,NA,.90)
+slc_SP <- c(0,-.74,0,
+            0,-.85,0,
+            0,-.83,0,
+            0,-.79,0,
+            0,-.88,0,
+            0,-.80,0,
+            .83,0,0,
+            .80,0,0,
+            .83,0,0,
+            .75,0,0,
+            .70,0,0,
+            .80,0,0,
+            0,0,.82,
+            0,0,.91,
+            0,0,.90)
 
 slc_SP  <- matrix(slc_SP,ncol = 3, byrow = T)
 
@@ -249,10 +244,52 @@ slc <- list(slc_C = list(lambda = slc_C),
             slc_SA = list(lambda = slc_SA),
             slc_SP = list(lambda = slc_SP))
 
-
 slc <- lapply(slc,function(x){
     n_facets <- nrow(x$lambda)/3
     return(list(lambda = x$lambda, n_facets = n_facets))
 })
 
+R_imp <- slc_SP %*% t(slc_SP)
+diag(R_imp) <- 1
+evar <- diag(diag(23) - pyli_lambda %*% t(slc_SP))
+out <- rmvnorm(1000,sigma = R_imp)
+
+R_imp
+cor(out) - R_imp
+cor(out) - R_imp
+R_imp
+
+out
+
+colnames(out)  <- paste0("x",1:15)
+head(out)
+
+slc_SP
+
+mod <- '
+f1 =~  NA*x1 + x2 + x3 + x4 + x5 + x6
+f2 =~  NA*x7 + x8 + x9 + x10 + x11 + x12
+f3 =~  NA*x13 + x14 + x15
+f1 ~~ 1*f1
+f2 ~~ 1*f2
+f3 ~~ 1*f3
+f1 ~~ f2
+f1 ~~ 0*f3
+f2 ~~ 0*f3'
+
+cov(out)
+summary(sem(mod,t(out2), missing ="ML"))
+summary(sem(mod,out))
+
+out2 <- t(apply(out, 1,function(x){
+    tp <- sample(1:3,1)
+    if(tp == 1){
+        x[-1:-6] <- NA
+    } else if(tp == 2){
+        x[-7:-12] <- NA
+    } else if(tp == 3){
+        x[-13:-15] <- NA
+    }
+    x
+}))
 
