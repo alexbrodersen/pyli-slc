@@ -1,0 +1,138 @@
+# Interpersonal and Self
+
+```{r}
+
+slc_cr <- read_csv("slc-cr.csv", skip = 1)
+colnames(slc_cr) <- c("Progress","Gender","Race","Major_Program","Organization","birth_year","why_take_assessment",paste0("q",seq_along(8:25)))
+
+slc_cr %>% select(q1:q15) %>% cor(use = "p") %>% corrplot()
+
+slc_cr %>% na.omit() -> slc_cr_complete
+
+slc_cr_mod <- "
+Civic_Resp =~ q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14 + q15 + q16 + q17 + q18
+s1 =~ q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9
+s2 =~ q10 + q11 + q12
+s3 =~ q13 + q14 + q15
+s4 =~ q16 + q17 + q18
+Civic_Resp ~~ 0*s1 + 0*s2 + 0*s3 + 0*s4
+Civic_Resp ~~ 1*Civic_Resp
+s1 ~~ 0*s2 + 0*s3 + 0*s4
+s2 ~~ 0*s3 + 0*s4
+s3 ~~ 0*s4
+"
+
+sem(slc_cr_mod, data = slc_cr_complete, std.lv = TRUE) %>% {
+    fit_cr <<- .
+    fitMeasures(., c("cfi","rmsea","srmr"))
+    }
+
+semPaths(fit_cr, "std",title = TRUE, curvePivot = TRUE)
+title("SLC-CR", line = 3)
+
+```
+
+# Societal
+
+```{r}
+
+
+slc_cr <- read_csv("slc-cr.csv", skip = 1)
+colnames(slc_cr) <- c("Progress","Gender","Race","Major_Program","Organization","birth_year","why_take_assessment",paste0("q",seq_along(8:25)))
+
+slc_cr %>% select(q1:q15) %>% cor(use = "p") %>% corrplot()
+
+slc_cr %>% na.omit() -> slc_cr_complete
+
+slc_cr_mod <- "
+Civic_Resp =~ q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14 + q15 + q16 + q17 + q18
+s1 =~ q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9
+s2 =~ q10 + q11 + q12
+s3 =~ q13 + q14 + q15
+s4 =~ q16 + q17 + q18
+Civic_Resp ~~ 0*s1 + 0*s2 + 0*s3 + 0*s4
+Civic_Resp ~~ 1*Civic_Resp
+s1 ~~ 0*s2 + 0*s3 + 0*s4
+s2 ~~ 0*s3 + 0*s4
+s3 ~~ 0*s4
+"
+
+sem(slc_cr_mod, data = slc_cr_complete, std.lv = TRUE) %>% {
+    fit_cr <<- .
+    fitMeasures(., c("cfi","rmsea","srmr"))
+    }
+
+semPaths(fit_cr, "std",title = TRUE, curvePivot = TRUE)
+title("SLC-CR", line = 3)
+
+```
+# Interpersonal and Group
+
+```{r}
+
+
+slc_cr <- read_csv("slc-cr.csv", skip = 1)
+colnames(slc_cr) <- c("Progress","Gender","Race","Major_Program","Organization","birth_year","why_take_assessment",paste0("q",seq_along(8:25)))
+
+slc_cr %>% select(q1:q15) %>% cor(use = "p") %>% corrplot()
+
+slc_cr %>% na.omit() -> slc_cr_complete
+
+slc_cr_mod <- "
+Civic_Resp =~ q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14 + q15 + q16 + q17 + q18
+s1 =~ q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9
+s2 =~ q10 + q11 + q12
+s3 =~ q13 + q14 + q15
+s4 =~ q16 + q17 + q18
+Civic_Resp ~~ 0*s1 + 0*s2 + 0*s3 + 0*s4
+Civic_Resp ~~ 1*Civic_Resp
+s1 ~~ 0*s2 + 0*s3 + 0*s4
+s2 ~~ 0*s3 + 0*s4
+s3 ~~ 0*s4
+"
+
+sem(slc_cr_mod, data = slc_cr_complete, std.lv = TRUE) %>% {
+    fit_cr <<- .
+    fitMeasures(., c("cfi","rmsea","srmr"))
+    }
+
+semPaths(fit_cr, "std",title = TRUE, curvePivot = TRUE)
+title("SLC-CR", line = 3)
+
+```
+
+# Strategic
+
+```{r}
+
+
+slc_cr <- read_csv("slc-cr.csv", skip = 1)
+colnames(slc_cr) <- c("Progress","Gender","Race","Major_Program","Organization","birth_year","why_take_assessment",paste0("q",seq_along(8:25)))
+
+slc_cr %>% select(q1:q15) %>% cor(use = "p") %>% corrplot()
+
+slc_cr %>% na.omit() -> slc_cr_complete
+
+slc_cr_mod <- "
+Civic_Resp =~ q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14 + q15 + q16 + q17 + q18
+s1 =~ q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9
+s2 =~ q10 + q11 + q12
+s3 =~ q13 + q14 + q15
+s4 =~ q16 + q17 + q18
+Civic_Resp ~~ 0*s1 + 0*s2 + 0*s3 + 0*s4
+Civic_Resp ~~ 1*Civic_Resp
+s1 ~~ 0*s2 + 0*s3 + 0*s4
+s2 ~~ 0*s3 + 0*s4
+s3 ~~ 0*s4
+"
+
+sem(slc_cr_mod, data = slc_cr_complete, std.lv = TRUE) %>% {
+    fit_cr <<- .
+    fitMeasures(., c("cfi","rmsea","srmr"))
+    }
+
+semPaths(fit_cr, "std",title = TRUE, curvePivot = TRUE)
+title("SLC-CR", line = 3)
+
+```
+

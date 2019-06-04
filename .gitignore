@@ -1,3 +1,12 @@
 /#*#
 **/*.pdf
 **/auto/
+*.docx
+*.xls
+*.svg
+*.history
+*exported*
+*woven*
+*.png
+*.csv
+*.zip
