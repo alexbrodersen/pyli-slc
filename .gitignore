@@ -10,3 +10,5 @@
 *.png
 *.csv
 *.zip
+/pyli_data/cfa_data/#cfatest.out#
+/pyli_data/
