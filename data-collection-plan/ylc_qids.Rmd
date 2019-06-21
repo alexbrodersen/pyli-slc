@@ -1,0 +1,160 @@
+# SLC Inventory Questions and Youth Leadership Model Questions
+
+## Intrapersonal
+### Self-Understanding-Self-Awareness and Development, Q9, Q10, Q11
+
+I have a good understanding of my personality characteristics, beliefs, and interests.
+I am aware of my strengths and weaknesses.
+I understand why I act the way I do.
+
+### Personal Contributions-Self-Awareness and Development, Q15, Q16, Q17
+When working on a group project, I can easily determine which of my strengths, skills, or ideas might be most
+beneficial to the project.
+I make sure to contribute my strengths, skills, and ideas to groups I am working with.
+I don't hold back from offering up my strengths, skills, and/or ideas if I think the group might be able to benefit from
+them.
+
+### Ethics-Personal Behavior, Q21, Q22, Q23
+I behave in an ethical manner.
+My decisions and actions follow an established code of ethics.
+I try to uphold the ethical code within which I am operating.
+
+### Confidence-Personal Behavior, Q36, Q37, Q38
+I express my opinions and beliefs with confidence.
+I am able to give information to others in a confident manner to help them feel assured during a difficult time.
+Even in times when I feel nervous or unsure, I am able to demonstrate confidence in what I am doing or saying.
+
+## Interpersonal
+
+### Productive Relationships-Interpersonal Interaction, Q9, Q10, Q11
+I make an effort to develop healthy, trusting, and respectful relationships.
+I work to improve important relationships that may not be the best they can be.
+I work to maintain productive relationships with those in my life.
+
+### Appropriate Interaction-Interpersonal Interaction, Q12, Q13, Q14
+I am able to assess a situation and easily determine socially acceptable behaviors.
+I behave according to what is most appropriate for the situation and person I am interacting with.
+I respect the boundaries of those I interact with.
+
+### Others’ Contributions-Interpersonal Interaction, Q27, Q28, Q29
+When confronted with a particular situation, I can easily determine who might be the best to assist given their
+strengths and skills.
+I have the skills needed to ensure that everyone in a group is operating from their strengths.
+I am able to put people in the roles that fit them best based on their skills and strengths.
+
+### Collaboration-Interpersonal Interaction, Q39, Q40, Q41
+I work well in groups.
+When on a team, I contribute my fair share of work.
+I am able to refrain from taking too much control of a group project or task.
+
+### Verbal Communication-Communication, Q9, Q10, Q11
+My verbal communication is concise and to the point.
+People easily understand what I am trying to say when I speak.
+Others appear engaged and interested when I am communicating with them.
+
+### Writing-Communication, Q19, Q20, Q21
+I am able to easily express what I want to say through writing.
+When writing, my thoughts come across as understandable to readers.
+My writing flows logically and clearly.
+
+### Conflict Negotiation-Communication, Q25, Q26, Q26
+When conflict arises, I try to achieve the best possible outcome for all involved rather than try to win.
+During conflict, I am able to stay focused on the issue at hand so the conflict does not become a personal attack.
+I am good at finding common ground.
+
+## Societal
+### Diversity-Civic Responsibility, Q9, Q10, Q11
+I make an effort meet people from a wide array of backgrounds and experiences.
+I interact regularly with people who are different from me.
+I reach out to people from a variety of backgrounds and experiences to be a part of my group or organization.
+### Others’ Circumstances-Civic Responsibility, Q12, Q13, Q14
+I try to learn about the circumstances facing others to better understand their needs.
+I make an effort to understand others' circumstances knowing they might be different from mine.
+I consider the circumstances of others before acting or reacting in a certain way.
+
+## Strategic
+### Research-Learning and Reasoning, Q9, Q10, Q11
+I am able to quickly find what I need from a vast array of available information.
+When I come across information, I can easily tell what is credible and what is not.
+I try to research multiple sources of information before I come to a conclusion.
+
+### Other Perspectives-Learning and Reasoning, Q12, Q13, Q14
+I seek out a variety of perspectives to help me shape my thoughts and opinions.
+I try to understand perspectives that are different from mine.
+I allow other perspectives to impact how I see the world.
+
+### Reflection and Application-Learning and Reasoning, Q15, Q16, Q17
+After an experience, I reflect on what I might do differently the next time.
+I try to learn from the past so I don't make the same mistake.
+I take what I learned from an experience and integrate it in to my future actions.
+
+### Analysis-Learning and Reasoning, Q21, Q22, Q23
+I am good at detecting patterns and trends across a variety of sources of information.
+When reviewing information, I look at the details to help me better understand the content.
+I can pull out the most important content from a lot of information.
+
+### Evaluation-Learning and Reasoning, Q27, Q28, Q29
+When faced with a choice, I am good at weighing out my options.
+I prioritize the work I need to do so what is most important or urgent gets done first.
+I have good judgment.
+
+### Problem Solving-Learning and Reasoning, Q33, Q34, Q35
+I am good at solving complex issues.
+I'm good at coming up with a variety of possible solutions to a problem.
+I can easily determine the best solution to a problem.
+
+### Decision Making-Learning and Reasoning, Q36, Q37, Q38
+I attempt to fully understand a situation before making a decision.
+I can make simple decisions quickly and easily.
+I use care in making decisions that may have an impact on others.
+
+# Qids
+
+## Intrapersonal
+```{r}
+"
+self_understanding =~ q9 + q10 + q11
+personal_contributions  =~ q15 + q16 + q17
+ethics =~ q21 + q22 + q23
+confidence =~ q36 + q37 + q38
+"
+```
+
+## Interpersonal
+
+```{r}
+"productive_relationships =~ q9 + q10 + q11
+appropriate_interaction =~ q12 + q13 + q14
+others_contributions =~ q27 + q28 + q29
+collaboration =~ q39 + q40 + q41
+verbal_communication =~ q9 + q10 + q11
+writing_communication =~ q19 + q20 + q21
+conflict_negotiation =~ q25 + q26 + q26
+"
+
+```
+
+## Societal
+```{r}
+"
+diversity =~ q9 + q10 + q11
+others_circumstances =~ q12 + q13 + q14
+"
+```
+
+## Strategic
+
+```{r}
+
+"
+research =~ q9 + q10 + q11
+other_perspectives =~ q12 + q13 + q14
+reflection_application =~ q15 + q16 + q17
+analysis =~ q21 + q22 + q23
+evaluation =~ q27 + q28 + q29
+problem_solving =~ q33 + q34 + q35
+decision_making =~ q36 + q37 + q38
+"
+
+```
+> 
